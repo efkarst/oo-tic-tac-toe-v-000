@@ -82,12 +82,12 @@ class TicTacToe
   end
 
   #determines if win is true or false
-def won?
-  res = false
-  WIN_COMBINATIONS.each do |win_combination|
-    board_entries = [@board[win_combination[0]], @board[win_combination[1]], @board[win_combination[2]]]
-    board_entries == ["X", "X", "X"] || board_entries == ["O", "O", "O"] ? res = win_combination : false
-  end
+  def won?
+    res = false
+    WIN_COMBINATIONS.each do |win_combination|
+      board_entries = [@board[win_combination[0]], @board[win_combination[1]], @board[win_combination[2]]]
+      board_entries == ["X", "X", "X"] || board_entries == ["O", "O", "O"] ? res = win_combination : false
+    end
     res
   end
 
